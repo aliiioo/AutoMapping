@@ -1,6 +1,8 @@
 ﻿
 
 using AutoMapper;
+using AutoMappering.DTOs;
+using AutoMappering.Models;
 
 namespace AutoMappering.ProfileAutoMap
 {
@@ -8,7 +10,7 @@ namespace AutoMappering.ProfileAutoMap
     {
         public AutomapperProfile()
         {
-
+            CreateMap<UserVewModel, User>().ReverseMap();
         }
     }
 }
