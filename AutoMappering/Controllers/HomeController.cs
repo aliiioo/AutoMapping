@@ -19,16 +19,19 @@ namespace AutoMappering.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index(UserVewModel userVewModeluser)
+        public IActionResult Index()
         {
-            var users = _mapper.Map<User>(userVewModeluser);
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public IActionResult Registering(UserVewModel userVewModeluser)
         {
-            return View();
+            var users = _mapper.Map<User>(userVewModeluser);
+
+            return RedirectToAction(nameof(Index));
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

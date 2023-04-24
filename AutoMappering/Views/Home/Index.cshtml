@@ -1,8 +1,51 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model AutoMappering.DTOs.UserVewModel
+@{
+    ViewData["Title"] = "Register";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<div class="d-lg-flex half">
+    <div class="bg order-1 order-md-2" style="background-image: url('/Login/images/bg_2.jpg');"></div>
+    <div class="contents order-2 order-md-1">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-7">
+            <div class="mb-4">
+              <h3>Register</h3>
+            </div>
+            <form asp-action="Registering" method="post">
+              <div class="form-group first">
+                <label >Name</label>
+                <input type="text" asp-for="name" class="form-control" >
+              </div>
+              <br />
+               <div class="form-group first">
+                <label >UserName</label>
+                <input asp-for="Usrename" type="text" class="form-control" >
+              </div>
+              <br />
+               <div class="form-group first">
+                <label >Phone Number</label>
+                <input type="text" asp-for="PhoneNumber" class="form-control" >
+              </div>
+              <br />
+              <div class="form-group last mb-3">
+                <label >Age</label>
+                <input type="text" asp-for="Age" class="form-control" >
+              </div>
+              <div class="form-group last mb-3">
+                <label >BearthDay</label>
+                <input type="datetime" asp-for="dateTime" class="form-control" >
+              </div>
+              
+              <input type="submit" value="submit" class="btn btn-block btn-primary">
+              <div class="social-login">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
