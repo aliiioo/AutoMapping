@@ -30,7 +30,9 @@ namespace AutoMappering.Controllers
             var users = _mapper.Map<User>(userVewModeluser);
 
             return RedirectToAction(nameof(Index));
-        }
+        }     
+
+       
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
