@@ -19,6 +19,10 @@ namespace AutoMappering.ProfileAutoMap
                     i.MapFrom(src => src.Age);
                 })
                 .ReverseMap();
+
+
+            CreateMap<TeacherVeiwModel, Teacher>()
+               .ReverseMap();
         }
     }
 }
